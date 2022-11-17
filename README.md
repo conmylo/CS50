@@ -1,2 +1,2 @@
 # CS50
-HarvardX CS50 Labs &amp; Problem sets solutions
+HarvardX CS50x - Intoduction to Web Design Labs &amp; Problem sets solutions.
