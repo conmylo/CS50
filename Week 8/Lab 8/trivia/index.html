@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // Code to check answers to questions
+            document.addEventListener('DOMContentLoaded', function(){
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click', function(){
+                    correct.style.backgroundColor = 'green';
+                    document.querySelector('#feedback1').innerHTML = 'Correct!';
+                });
+
+                let incorrects = document.querySelectorAll('.incorrect');
+                for (let i = 0; i < incorrects.length; i++){
+                    incorrects[i].addEventListener('click', function(){
+                        incorrects[i].style.backgroundColor = 'red';
+                        document.querySelector('#feedback1').innerHTML= 'Incorrect';
+                    });
+                }
+
+                document.querySelector('#check').addEventListener('click', function(){
+                    let input = document.querySelector('input');
+                    if (input.value == 'Zakynthos'){
+                        input.style.backgroundColor = 'green';
+                        document.querySelector('#feedback2').innerHTML = 'Correct';
+                    }
+                    else {
+                        input.style.barckgroundColor = 'red';
+                        document.querySelector('#feedback2').innerHTML = 'Incorrect';
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- Multiple choice question here -->
+                <h3> What is the second-largest city of Greece? </h3>
+
+                <button class="incorrect">Athens</button>
+                <button class="incorrect">Patra</button>
+                <button class="incorrect">Larisa</button>
+                <button class="correct">Thessaloniki</button>
+                <button class="incorrect">Volos</button>
+
+                <p id="feedback1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- Free response question here -->
+                <h3> In which greek island is the famous beach "Navagio" located? </h3>
+
+                <input type="text"></input>
+                <button id ="check">Check Answer</button>
+
+                <p id="feedback2"></p>
+            </div>
+        </div>
+    </body>
+</html>

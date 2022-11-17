@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+        <link href="styles.css" rel="stylesheet">
+        <title>CS50</title>
+    </head>
+    <body>
+        <nav class="navbar sticky-top navbar-expand-lg">
+          <a class="navbar-brand" href="index.html"><b>CS50</b></a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="information.html">Information</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="enroll.html">Enroll</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+              </ul>
+          </nav>
+        <h3>Welcome to CS50!</h3>
+        <p>
+          This is CS50x , Harvard University's introduction to the intellectual enterprises of computer science and the art of programming for majors and non-majors alike, with or without prior programming experience. An entry-level course taught by David J. Malan, CS50x teaches students how to think algorithmically and solve problems efficiently. Topics include abstraction, algorithms, data structures, encapsulation, resource management, security, software engineering, and web development. Languages include C, Python, SQL, and JavaScript plus CSS and HTML. Problem sets inspired by real-world domains of biology, cryptography, finance, forensics, and gaming. The on-campus version of CS50x , CS50, is Harvard's largest course.
+        </p>
+        <p>
+          Students who earn a satisfactory score on 9 problem sets (i.e., programming assignments) and a final project are eligible for a certificate. This is a self-paced course–you may take CS50x on your own schedule.
+        </p>
+        <button id="clickme" onclick="myFunction()">Click me!</button>
+        <!--Function to show "This is CS50! message on click using javascript-->
+        <script>
+          function myFunction() {
+            document.getElementById("clickme").innerHTML = "This is CS50!";
+          }
+        </script>
+    </body>
+</html>

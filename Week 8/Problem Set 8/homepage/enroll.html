@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>CS50</title>
+    </head>
+    <body>
+        <nav class="navbar sticky-top navbar-expand-lg">
+          <a class="navbar-brand" href="index.html"><b>CS50</b></a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="information.html">Information</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="enroll.html">Enroll</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+              </ul>
+          </nav>
+        <h3>Fill out the form below to enroll now!</h3>
+        <form onsubmit="return false;" id="enroll-form">
+          <div class="enrollment-introduction">
+            <p>Interested in joining CS50? Submit the form below, and audit the course for free.</p>
+          </div>
+          <div class="separator-line"></div>
+          <div>
+            <p class="form-section-heading"><strong><Bold>Your Information</Bold></strong></p>
+          </div>
+          <div class="first-name-field field-container">
+            <label id="first-name-label">First Name <span class="required-star">*</span></label>
+            <input class="required-input" required id='first-name-input' type="text" name="first-name" placeholder="David">
+          </div>
+          <div class="last-name-field field-container">
+            <label id="last-name-label">Last Name <span class="required-star">*</span></label>
+            <input class="required-input" required id='last-name-input' type="text" name="last-name" placeholder="Malan">
+          </div>
+          <div class="title-field field-container">
+            <label id="job-title-label">Job Title <span class="required-star">*</span></label>
+            <input class="required-input" required id='job-title-input' type="text" name="job-title" placeholder="Programmer">
+          </div>
+          <div class="email-field field-container">
+            <label id="email-label" for="email-input">Email <span class="required-star">*</span></label>
+            <input class="required-input" id="email-input" type="email" name="email" pattern="^.+@[^\.].*\.[a-z]{2,}$" placeholder='malan@harvard.edu' required />
+          </div>
+          <div class="phone-field field-container">
+            <label id="phone-label" for="phone-input">Phone number <span class="required-star">*</span></label>
+            <input class="required-input" type="tel" id="phone-input" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required placeholder="123-456-7890">
+          </div>
+          <div class="address-field text-container">
+            <label id="address-label">Address <span class="required-star">*</span></label>
+            <textarea class="required-input" id="address-input" required name="address-field" placeholder="45 Quincy St"></textarea>
+          </div>
+          <div class="city-field field-container">
+            <label id="city-label">City <span class="required-star">*</span></label>
+            <input class="required-input" required id='city-input' type="text" name="city" placeholder="Cambridge">
+          </div>
+          <div class="zip-code-field field-container">
+            <label id="zip-code-label">ZIP Code <span class="required-star">*</span></label>
+            <input class="required-input" required id='zip-code-input' type="text" name="zip-code" placeholder="02138" pattern="^\d{5}$">
+          </div>
+          <div class="country-field field-container">
+            <label id="country-label">Country <span class="required-star">*</span></label>
+            <input class="required-input" required id='country-input' type="text" name="country" placeholder="US">
+          </div>
+          <button id="submit">Submit</button>
+        </form>
+    </body>
+</html>
