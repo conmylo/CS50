@@ -1,0 +1,18 @@
+sort1 uses: Bubble sort
+
+How do you know?: I can infere that, since I have already excluded merge sort (which is sort2). Then betweeen sort1 and sort3, I want
+to compare big omegas. I know that bubble sort has a much smaller big omega, which reflects on the time needed to sort an already sorted
+list. The difference would be much bigger on bigger lists, so I compared sorted50000.txt times on sort1 and sort3, and since sort1 took
+4,216s and sort3 took 7,392s, I can understand that sort1 is bubble sort and sort3 is selection sort.
+
+sort2 uses: Merge sort
+
+How do you know?: Merge sort has a smaller big o, compared to bubble sort and selection sort, so I compared the random.txt files.
+In random5000.txt for example, sort2 took 0.046s, while sort1 took 0.092s and sort3 took 0.101s. Running the tests some times more,
+and seeing that sort2 takes much lesser time to sort the random numbers, I can infere that sort2 is merge sort, since I know it has
+the smallest big o of the three methods.
+
+sort3 uses: Selection sort
+
+How do you know?: The explanation is above, where I explained why sort2 is merge sort and between sort1 and sort3, sort1 must be
+bubblesort, so sort3 is selection sort.
