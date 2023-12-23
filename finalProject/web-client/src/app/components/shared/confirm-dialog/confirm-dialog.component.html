@@ -1,0 +1,16 @@
+<mat-card class="padding: 1rem;">
+  <mat-card-title style="display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center;">{{title}}</mat-card-title>
+  <mat-card-content>
+    <div class="row mt-1">
+    {{message}}
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <div class="row mt-1" style="justify-content: flex-end; gap: 15px; width: 100%;">
+      <button mat-flat-button (click)="closeDialog()">No</button>
+      <button mat-flat-button (click)="closeDialog(true)">Yes</button>
+    </div>
+  </mat-card-actions>
+</mat-card>

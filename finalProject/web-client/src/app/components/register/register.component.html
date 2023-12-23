@@ -1,0 +1,42 @@
+<div class="column">
+  <div class="row main">
+
+    <div class="form-container">
+      <div class="row center">
+        <label style="font-size: 18px;">Registration Form</label>
+      </div>
+      <div class="row mt-1">
+        <label>Username</label>
+      </div>
+      <div class="row">
+        <mat-form-field class="form-field" appearance="outline">
+          <input matInput [(ngModel)]="user.username" type="text">
+        </mat-form-field>
+      </div>
+
+      <div class="row">
+        <label>Email</label>
+      </div>
+      <div class="row">
+        <mat-form-field class="form-field" appearance="outline">
+          <input matInput [(ngModel)]="user.email" type="text">
+        </mat-form-field>
+      </div>
+
+      <div class="row">
+        <label>Password</label>
+      </div>
+      <div class="row">
+        <mat-form-field class="form-field" appearance="outline">
+          <input matInput [(ngModel)]="user.password" type="password">
+        </mat-form-field>
+      </div>
+
+      <div class="row center">
+        <button [disabled]="!isFormValid()" mat-raised-button (click)="registerUser()">Register</button>
+      </div>
+
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,76 @@
+<div class="column">
+
+  <div class="row" style="gap: 5px; justify-content: flex-start; align-items: center;">
+    <mat-form-field appearance="fill" style="width: 250px;">
+      <mat-label>
+        Enter new item description
+      </mat-label>
+      <input matInput [(ngModel)]="item.description">
+    </mat-form-field>
+
+    <button *ngIf="!selectedItemRecord" mat-icon-button [disabled]="!item.description" (click)="createNewItem()">
+      <mat-icon>add</mat-icon>
+    </button>
+
+    <button *ngIf="selectedItemRecord" mat-icon-button [disabled]="!item.description" (click)="clearItemDescription()">
+      <mat-icon>close</mat-icon>
+    </button>
+
+    <button *ngIf="selectedItemRecord" mat-icon-button [disabled]="!item.description" (click)="updateItem()">
+      <mat-icon>update</mat-icon>
+    </button>
+  </div>
+  <div class="row mt-1">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <!-- ID Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> List Id </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+
+      <!-- Title Column -->
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef> Item Description </th>
+        <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+      </ng-container>
+
+      <!-- Added At Column -->
+      <ng-container matColumnDef="addedAt">
+        <th mat-header-cell *matHeaderCellDef> Added At </th>
+        <td mat-cell *matCellDef="let element"> {{element.addedAt}} </td>
+      </ng-container>
+
+      <!-- isCompleted At Column -->
+      <ng-container matColumnDef="isCompleted">
+        <th mat-header-cell *matHeaderCellDef> Status </th>
+        <td mat-cell *matCellDef="let element">
+        <button mat-icon-button *ngIf="element.isCompleted" matTooltip="Completed"><mat-icon>done</mat-icon></button>
+        <button mat-icon-button *ngIf="!element.isCompleted" matTooltip="Pending"><mat-icon>refresh</mat-icon></button>
+        </td>
+      </ng-container>
+
+      <!-- Actions Column -->
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> Actions </th>
+        <td mat-cell *matCellDef="let element">
+          <div class="row" style="gap: 15px;">
+            <button mat-icon-button (click)="editItem(element)"><mat-icon >edit</mat-icon></button>
+            <button  *ngIf="!element.isCompleted" mat-icon-button (click)="updateItemCheck(element)"><mat-icon >done</mat-icon></button>
+            <button mat-icon-button (click)="deleteItem(element.id)"><mat-icon >delete</mat-icon></button>
+          </div>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="columns"></tr>
+      <tr mat-row *matRowDef="let row; columns: columns;"></tr>
+    </table>
+  </div>
+  <div class="row mt-1" *ngIf="dataSource.data.length === 0">
+    <div class="column center" style="width: 100%; background-color: white; height: 15vh; justify-content: center; align-items: center; text-align: center">
+      <label style="margin-top: auto; margin-bottom: auto;">You don't have any items in this list yet</label>
+    </div>
+  </div>
+
+</div>
+

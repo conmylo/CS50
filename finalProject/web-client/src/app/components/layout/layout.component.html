@@ -1,0 +1,19 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <span style="flex: 0.9">
+      <label (click)="navigateToHome()">To Do List App</label>
+    </span>
+
+    <span style="flex: 1; justify-content: flex-start">
+      <button *ngIf="isAdmin()" mat-icon-button (click)="navigateToUsers()"><mat-icon>person</mat-icon> Users</button>
+    </span>
+
+    <span *ngIf="user" style="align-items: center;">
+      <label>{{user.username}}</label>
+      <mat-icon (click)="logout()">lock</mat-icon>
+    </span>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div class="mt-1" style="padding: 1rem;">
+<router-outlet></router-outlet>
+</div>

@@ -1,0 +1,8 @@
+<p *ngIf="list">
+  <label>List: <u>{{list[0].title}}</u>
+  </label>
+</p>
+
+<div class="column mt-1" style="width: 100%; flex:1;" *ngIf="listId">
+    <app-items [listId]="listId"></app-items>
+</div>

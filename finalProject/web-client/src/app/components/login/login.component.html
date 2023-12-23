@@ -1,0 +1,56 @@
+<!--<div class="container">-->
+<!--  <div class="wrapper">-->
+<!--    <div class="title"><span>Login Form</span></div>-->
+<!--    <form action="#">-->
+<!--      <div class="row">-->
+<!--        <i class="fas fa-user"></i>-->
+<!--        <input type="text" placeholder="Username" required>-->
+<!--      </div>-->
+<!--      <div class="row">-->
+<!--        <i class="fas fa-lock"></i>-->
+<!--        <input type="password" placeholder="Password" required>-->
+<!--      </div>-->
+<!--      <div class="row button">-->
+<!--        <input type="submit" value="Login">-->
+<!--      </div>-->
+<!--      <div class="signup-link">Not a member? <a style="cursor: pointer" (click)="navigateToRegister()">Signup now</a></div>-->
+<!--    </form>-->
+<!--  </div>-->
+<!--</div>-->
+
+<div class="column">
+  <div class="row main">
+
+      <div class="form-container">
+        <div class="row center">
+          <label style="font-size: 18px;">Log in</label>
+        </div>
+        <div class="row mt-1">
+          <label>Username</label>
+        </div>
+        <div class="row">
+          <mat-form-field class="form-field" appearance="outline">
+          <input matInput [(ngModel)]="user.username" type="text">
+          </mat-form-field>
+        </div>
+
+        <div class="row">
+          <label>Password</label>
+        </div>
+        <div class="row">
+          <mat-form-field class="form-field" appearance="outline">
+            <input matInput [(ngModel)]="user.password" type="password">
+          </mat-form-field>
+        </div>
+
+        <div class="row center">
+          <button mat-raised-button (click)="login()">Sign in</button>
+        </div>
+
+        <div class="row center mt-1">
+          <label>You don't have an account? &nbsp; <a style="cursor: pointer; text-decoration: underline" (click)="navigateToRegister()">Register now!</a></label>
+        </div>
+      </div>
+    </div>
+
+</div>
